@@ -1,0 +1,242 @@
+@import "tailwindcss";
+@import "./colors.css";
+
+@font-face {
+    font-family: "avenirMedium";
+    src: url("../../public/fonts/avenir/avenirMedium.otf");
+}
+
+@font-face {
+    font-family: "avenirSemi";
+    src: url("../../public/fonts/avenir/avenirSemi.otf");
+}
+
+@font-face {
+    font-family: "avenirBold";
+    src: url("../../public/fonts/avenir/avenirBold.otf");
+}
+
+@font-face {
+    font-family: "avenirExtraBold";
+    src: url("../../public/fonts/avenir/avenirExtraBold.otf");
+}
+
+/* Russian fonts */
+@font-face {
+    font-family: "montseratMedium";
+    src: url("../../public/fonts/avenir/Montserrat-Medium.ttf");
+}
+
+@font-face {
+    font-family: "montseratSemi";
+    src: url("../../public/fonts/avenir/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "montseratBold";
+    src: url("../../public/fonts/avenir/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: "montseratExtraBold";
+    src: url("../../public/fonts/avenir/Montserrat-ExtraBold.ttf");
+}
+
+html {
+    scroll-behavior: smooth;
+    /*font-size: clamp(16px, 1vw, 30px);*/
+}
+
+body {
+    background: var(--color-mainBg);
+    font-size: 16px;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+}
+
+.container {
+    margin: auto;
+    max-width: 1440px !important;
+    padding-inline: 12px;
+}
+
+.con {
+    max-width: 1336px !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #dde4fd;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #878dbc;
+}
+
+::selection {
+    /*background-color: var(--color-red); !* bright blue *!*/
+    color: var(--color-primary);
+}
+
+::-moz-selection {
+    /*background-color: var(--color-red);*/
+    color: var(--color-primary);
+}
+
+.selectReverse ::selection {
+    color: var(--color-textGrey) !important;
+}
+
+.selectReverse ::selection {
+    color: var(--color-textGrey) !important;
+}
+
+.con {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+.transition05 {
+    transition: 0.05s linear all;
+}
+
+.transition1 {
+    transition: 0.1s linear all;
+}
+
+.transition2 {
+    transition: 0.2s linear all;
+}
+
+.transition3 {
+    transition: 0.3s linear all;
+}
+
+.isOpenDropdown img {
+    transition: 0.2s linear all;
+    transform: rotate(180deg);
+}
+
+.changeLangDropdown {
+    border: 1px solid #1a1a1a33;
+}
+
+/* If using global CSS */
+.no-header-drawer .ant-drawer-header {
+    display: none;
+}
+
+.no-header-drawer .ant-drawer-body {
+    padding-top: 0; /* Optional: remove extra padding if needed */
+}
+
+.burger-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.burger-icon {
+    transition: all 0.3s ease-in-out;
+}
+
+.line {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+.burger-icon.open .top {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-icon.open .middle {
+    opacity: 0;
+}
+
+.burger-icon.open .bottom {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.faqCollapse .ant-collapse-item {
+    background: transparent !important;
+    transition: 0.1s linear all;
+}
+
+.faqCollapse .ant-collapse-item-active {
+    background: var(--color-white) !important;
+    transition: 0.1s linear all;
+}
+
+.faqCollapse .ant-collapse-header {
+    padding: 24px !important;
+}
+
+.service-modal .ant-modal-content {
+    padding: 0 !important;
+}
+
+.service-modal .ant-modal-content {
+    border-radius: 16px !important;
+}
+
+.ant-drawer-body {
+    padding: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-inline: 1rem;
+    }
+
+    .faqCollapse .ant-collapse-header {
+        padding: 20px 16px !important;
+        display: flex;
+
+        align-items: center !important;
+    }
+}
+
+/* Russian locale font overrides */
+html[lang="ru"] .font-\[avenirMedium\] {
+    font-family: "montseratMedium", "avenirMedium", sans-serif !important;
+}
+
+html[lang="ru"] .font-\[avenirSemi\] {
+    font-family: "montseratSemi", "avenirSemi", sans-serif !important;
+}
+
+html[lang="ru"] .font-\[avenirBold\] {
+    font-family: "montseratBold", "avenirBold", sans-serif !important;
+}
+
+html[lang="ru"] .font-\[avenirExtraBold\] {
+    font-family: "montseratExtraBold", "avenirExtraBold", sans-serif !important;
+}
+
+.dynamic-svg {
+    transition: 300ms ease-out;
+
+    path,
+    rect {
+        transition: 300ms ease-out;
+    }
+
+    path[data-name="fill"] {
+        fill: var(--svg-color);
+    }
+
+    path[data-name="stroke"] {
+        stroke: var(--svg-color);
+    }
+}
